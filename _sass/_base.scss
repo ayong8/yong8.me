@@ -164,7 +164,7 @@ hr {
 
 ul li,
 ol li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
 }
 
 li ul,
@@ -313,3 +313,14 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
   -webkit-transition: $global-transition;
   transition: $global-transition;
 }
+
+/* custom */
+.news-table { border-collapse: collapse; border: none; }
+.news-table td { border: none; vertical-align: top; min-width: 100px; padding: 3px 0; }
+.paper_wrapper { margin-bottom: 10px; }
+.paper-title { max-width: 600px; font-size: 0.9rem; font-weight: bold; color: #2700d1; line-height: 17px; }
+.paper-author { font-size: 0.75rem; line-height: 17px; }
+.paper-metadata { font-size: 0.75rem; }
+.paper-venue { font-style: italic; }
+.paper-paperurl, .paper-codeurl, .paper-websiteurl { text-decoration: none !important; color: #0028c1; }
+.cv-url { color: #0028c1; font-size: 0.85rem; font-weight: 900; }

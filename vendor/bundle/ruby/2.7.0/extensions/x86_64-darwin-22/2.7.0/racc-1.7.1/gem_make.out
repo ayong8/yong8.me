@@ -1,0 +1,20 @@
+current directory: /Users/yong8/Workspace/yong8.me/vendor/bundle/ruby/2.7.0/gems/racc-1.7.1/ext/racc/cparse
+/usr/local/opt/ruby@2.7/bin/ruby extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/yong8/Workspace/yong8.me/vendor/bundle/ruby/2.7.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230824-64900-1mopo2k sitelibdir\=./.gem.20230824-64900-1mopo2k clean
+
+current directory: /Users/yong8/Workspace/yong8.me/vendor/bundle/ruby/2.7.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230824-64900-1mopo2k sitelibdir\=./.gem.20230824-64900-1mopo2k
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/yong8/Workspace/yong8.me/vendor/bundle/ruby/2.7.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230824-64900-1mopo2k sitelibdir\=./.gem.20230824-64900-1mopo2k install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20230824-64900-1mopo2k/racc
+
+current directory: /Users/yong8/Workspace/yong8.me/vendor/bundle/ruby/2.7.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230824-64900-1mopo2k sitelibdir\=./.gem.20230824-64900-1mopo2k clean

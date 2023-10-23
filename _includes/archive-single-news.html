@@ -1,0 +1,33 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<tr>
+  <td class="date">{{ post.newsDate }}</td>
+  <td class="announcement">{{ post.announcement }}</td>
+</tr>
+
+<!-- <div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <table class="news-table">
+      <tr>
+        <td class="date">{{ post.newsDate }}</td>
+        <td class="announcement">{{ post.announcement }}</td>
+      </tr>
+    </table>
+
+    {% if post.collection == 'news' %}
+      <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+    {% endif %}
+  </article>
+</div> -->

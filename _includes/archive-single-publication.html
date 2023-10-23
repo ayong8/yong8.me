@@ -1,0 +1,48 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% if author.googlescholar %}
+  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
+{% endif %}
+
+<div class="paper_wrapper">
+  <div class="paper-title">{{ post.title }}</div>
+  <div class="paper-author">{{ post.author }}</div>
+  <div class="paper-metadata">
+    <span class="paper-venue">{{ post.venue }}</span>
+    &nbsp; | &nbsp; 
+    <a href="{{ post.paperurl }}" class="paper-paperurl">paper</a>
+    {% if post.codeurl %}
+      &nbsp; <a href="{{ post.codeurl }}" class="paper-codeurl">code</a>
+    {% endif %}
+    {% if post.websiteurl %}
+      &nbsp; <a href="{{ post.websiteurl }}" class="paper-websiteurl">website</a>
+    {% endif %}
+  </div>
+</div>
+
+<!-- <div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <table class="news-table">
+      <tr>
+        <td class="date">{{ post.newsDate }}</td>
+        <td class="announcement">{{ post.announcement }}</td>
+      </tr>
+    </table>
+
+    {% if post.collection == 'news' %}
+      <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+    {% endif %}
+  </article>
+</div> -->
